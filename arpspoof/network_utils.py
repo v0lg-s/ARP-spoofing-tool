@@ -14,7 +14,7 @@ def spoof_arp(target_mac: str, spoofed_ip: str, target_ip: str, spoofed_mac: str
 
 def build_legitime_arp(target_mac: str, target_ip: str, real_src_mac: str, real_src_ip: str):
     """This function creates the real ARP packet so the ARP cache can be restored"""
-    print("[!] Restaurado",target_ip)
+    print("[!] Restaurando cache ARP de:",target_ip)
     packet = scapy.all.Ether(dst=target_mac) / scapy.all.ARP(op=2,psrc=real_src_ip,pdst=target_ip,hwsrc=real_src_mac,hwdst=target_mac)
     return packet
 

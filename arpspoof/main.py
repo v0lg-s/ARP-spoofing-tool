@@ -26,7 +26,14 @@ spoofed_IP= str(input("\n\n[+] Ingrese la IP a falsificar:\n"))
 
 spoofer = ARPspoofer(spoofed_IP,target_IP)
 
-print("Opciones\n Ataque dirigido a: "+target_IP+"\n Falsificamos las respuestas de: "+spoofed_IP)
+print('''\n\n
+      
+      ******************************************************
+                Confirmar Detalles
+        [*] Ataque dirigido a: {}
+        [*] Falsificar las respuestas ARP de: {}
+      ******************************************************
+      '''.format(target_IP,spoofed_IP))
 attack = int(input("\n\n[+] Presione 1 para confirmar e iniciar el ataque\n[+] Presione 2 para cancelar\n"))
 
 if attack == 1:
