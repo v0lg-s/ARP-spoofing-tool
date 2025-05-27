@@ -45,7 +45,7 @@ if attack == 1:
         spoofer.stop_attack()
         
 elif attack == 2:
-    exit
+    exit()
 
 
 
